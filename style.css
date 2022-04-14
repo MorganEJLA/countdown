@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap");
+
 html {
   box-sizing: border-box;
 }
@@ -8,6 +10,7 @@ body {
   overflow-y: hidden;
   display: flex;
   align-items: center;
+  font-family: Comfortaa, cursive;
 }
 
 /* Video Background */
@@ -79,6 +82,7 @@ input {
   border-radius: 20px;
   background: #fff;
   outline: none;
+  font-family: Comfortaa, cursive;
 }
 
 /* Button */
@@ -95,12 +99,17 @@ button {
   outline: none;
 }
 
+button:hover {
+  filter: brightness(110%);
+}
+
 /* Countdown */
 ul {
   margin-left: -45px;
 }
 
 li {
+  display: inline-block;
   font-size: 30px;
   list-style-type: none;
   padding: 10px;
@@ -119,6 +128,31 @@ li span {
   top: 60px;
 }
 
+.complete-title {
+  animation: complete 4s infinite;
+}
+
+@keyframes complete {
+  0% {
+    color: rgb(238, 18, 18);
+  }
+
+  25% {
+    color: rgb(234, 238, 18);
+  }
+
+  50% {
+    color: rgb(80, 238, 18);
+    transform: scale(1.5);
+  }
+  75% {
+    color: rgb(18, 121, 238);
+  }
+
+  100% {
+    color: rgb(109, 19, 212);
+  }
+}
 /* Media Query: Large Smartphone (Vertical) */
 
 @media screen and (max-width: 600px) {
